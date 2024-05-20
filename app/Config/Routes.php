@@ -17,6 +17,7 @@ $routes->get('/logout', 'Home::logout');
 $routes->get('/dashboard', 'Home::dashboard');
 $routes->post('/home', 'Home::home');
 $routes->get('/users_data', 'Home::users_data');
+
 $routes->post('/edit/(:num)', 'Home::edit/$1');
 //$routes->post('/edit/(:num)', 'Home::edit/$1');
 $routes->post('/update/(:num)', 'Home::update/$1');
@@ -25,8 +26,8 @@ $routes->get('/delete/(:num)', 'Home::delete/$1');
 $routes->get('/upload', 'Home::upload');
 $routes->post('/upload', 'Home::upload');
 $routes->get('/profile', 'Home::profile');
-$routes->get('/profileUpdate', 'Home::profileUpdate');
-$routes->post('/profileUpdate', 'Home::profileUpdate');
+$routes->get('/profile_update', 'Home::profile_update');
+$routes->post('/profile_update', 'Home::profile_update');
 $routes->get('/change_password', 'Home::change_password');
 $routes->post('/change_password', 'Home::change_password');
 $routes->get('/about_us', 'Home::about_us');
@@ -34,4 +35,8 @@ $routes->get('/contact', 'Home::contact');
 
 
 
+$routes->get('admin', 'Admin\Controllers\Admin::index');
+$routes->get('admin/admin_dashboard', 'Admin\Controllers\Admin::admin_dashboard');
 
+// $routes->get('/', 'admin::index');
+// $routes->get('/admin_dashboard', 'Admin::admin_dashboard');

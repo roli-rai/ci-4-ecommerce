@@ -3,28 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ECOMMERCE Edit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </head>
 <body>
-<?php include('include/nav.php'); ?>
+    <?php include('include/nav.php'); ?>
+            <div class="container my-3 p-4">
+                <div class="row justify-content-center p-2"> 
+                    <div class="col-6">
+                        <div class="card shadow">
+                            <div class="card-body">
+                            <h2 class="card-title text-center">User Edit </h2>
+                                <form action="<?= base_url('update/' . $user['user_id']) ?>" method="post">
+                                    <div class=" mb-3"><span class="input-group-text">
+                                        <label for="username">UserName:</label>
+                                        <input  class="form-control" required type="text" placeholder="username" id="username" name="username" value="<?= $user['username'] ?>"><br><br>
+                                    </div>
+                                    <div class=" mb-3"><span class="input-group-text">
+                                        <label for="email">Email:</label>
+                                        <input   class="form-control" required type="email" placeholder="email" id="email" name="email" value="<?= $user['email'] ?>"><br><br>
+                                    </div>
+                                    <div class=" mb-3"><span class="input-group-text">
+                                        <label for="password">Password:</label>
+                                        <input  class="form-control" required type="password" placeholder="password" id="password" name="password"><br><br>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    </div>                                
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php include('include/footer.php'); ?>
 
-    <H1> Information</H1>
-
-    <form action="<?= base_url('update/' . $user['id']) ?>" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="<?= $user['name'] ?>"><br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="<?= $user['email'] ?>"><br><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br><br>
-        
-        <button type="submit">Update</button>
-    </div>
 </body>
 </html>

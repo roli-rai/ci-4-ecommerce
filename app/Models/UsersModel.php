@@ -7,6 +7,15 @@ use CodeIgniter\Model;
 class UsersModel extends Model
 {
     protected $table = 'users';
-    protected $primaryKey = 'id';
-    protected $allowedFields = ['name', 'email', 'password'];
+    protected $primaryKey = 'user_id';
+    protected $allowedFields = ['username', 'email', 'password'];
+
+    // // User details table configuration
+    // protected $detailsTable = 'user_details';
+    // protected $detailsPrimaryKey = 'id';
+    // protected $detailsAllowedFields = ['user_id', 'country', 'state', 'district', 'pincode', 'mobile', 
+    // 'local_address', 'permanent_address'];
+
 }
+
+

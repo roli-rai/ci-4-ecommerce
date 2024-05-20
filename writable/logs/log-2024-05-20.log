@@ -1,0 +1,1115 @@
+CRITICAL - 2024-05-20 05:36:37 --> ErrorException: Undefined array key "id"
+in APPPATH\Controllers\Home.php on line 81.
+ 1 APPPATH\Controllers\Home.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ci-4\\app\\Controllers\\Home.php', 81)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->login()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-20 05:45:43 --> mysqli_sql_exception: Unknown column 'users.id' in 'where clause' in C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci-4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci-4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci-4\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\ci-4\app\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+#8 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci-4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-20 05:45:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:45:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:45:44 --> [Caused by] mysqli_sql_exception: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-20 05:46:16 --> mysqli_sql_exception: Unknown column 'users.id' in 'where clause' in C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci-4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci-4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci-4\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\ci-4\app\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+#8 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci-4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-20 05:46:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:16 --> [Caused by] mysqli_sql_exception: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-20 05:46:18 --> mysqli_sql_exception: Unknown column 'users.id' in 'where clause' in C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci-4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci-4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci-4\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\ci-4\app\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+#8 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci-4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-20 05:46:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:18 --> [Caused by] mysqli_sql_exception: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-20 05:46:18 --> mysqli_sql_exception: Unknown column 'users.id' in 'where clause' in C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci-4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci-4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci-4\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\ci-4\app\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+#8 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci-4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-20 05:46:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:18 --> [Caused by] mysqli_sql_exception: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-20 05:46:19 --> mysqli_sql_exception: Unknown column 'users.id' in 'where clause' in C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci-4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci-4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci-4\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\ci-4\app\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+#8 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci-4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-20 05:46:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:19 --> [Caused by] mysqli_sql_exception: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-20 05:46:19 --> mysqli_sql_exception: Unknown column 'users.id' in 'where clause' in C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci-4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci-4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci-4\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\ci-4\app\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+#8 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci-4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-20 05:46:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:19 --> [Caused by] mysqli_sql_exception: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-20 05:46:19 --> mysqli_sql_exception: Unknown column 'users.id' in 'where clause' in C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci-4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci-4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci-4\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\ci-4\app\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+#8 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci-4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-20 05:46:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:19 --> [Caused by] mysqli_sql_exception: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-20 05:46:19 --> mysqli_sql_exception: Unknown column 'users.id' in 'where clause' in C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci-4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci-4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci-4\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\ci-4\app\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+#8 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci-4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-20 05:46:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:19 --> [Caused by] mysqli_sql_exception: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-20 05:46:21 --> mysqli_sql_exception: Unknown column 'users.id' in 'where clause' in C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci-4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci-4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci-4\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\ci-4\app\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+#8 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci-4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-20 05:46:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:21 --> [Caused by] mysqli_sql_exception: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-20 05:46:21 --> mysqli_sql_exception: Unknown column 'users.id' in 'where clause' in C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci-4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci-4\system\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci-4\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\ci-4\app\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+#8 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci-4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-05-20 05:46:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:46:21 --> [Caused by] mysqli_sql_exception: Unknown column 'users.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `users`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(200): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, '1')
+ 7 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->find('1')
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 05:47:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "update_profile.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('update_profile.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('update_profile', [], true)
+ 3 APPPATH\Controllers\Home.php(350): view('update_profile', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profileUpdate()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:00:07 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 970.
+ 1 SYSTEMPATH\BaseModel.php(970): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Home.php(366): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:02:42 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 970.
+ 1 SYSTEMPATH\BaseModel.php(970): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Home.php(366): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:08:27 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 970.
+ 1 SYSTEMPATH\BaseModel.php(970): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Home.php(366): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:08:31 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 970.
+ 1 SYSTEMPATH\BaseModel.php(970): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Home.php(366): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:34:10 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 970.
+ 1 SYSTEMPATH\BaseModel.php(970): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Home.php(366): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:34:15 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 970.
+ 1 SYSTEMPATH\BaseModel.php(970): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Home.php(366): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:34:20 --> ParseError: syntax error, unexpected token "/", expecting "," or ";"
+in APPPATH\Views\profile_update.php on line 22.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 3 APPPATH\Controllers\Home.php(372): view('profile_update')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:34:25 --> ParseError: syntax error, unexpected token "/", expecting "," or ";"
+in APPPATH\Views\profile_update.php on line 22.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 3 APPPATH\Controllers\Home.php(372): view('profile_update')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:35:58 --> ParseError: syntax error, unexpected token "/", expecting "," or ";"
+in APPPATH\Views\profile_update.php on line 22.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 3 APPPATH\Controllers\Home.php(372): view('profile_update')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:35:59 --> ParseError: syntax error, unexpected token "/", expecting "," or ";"
+in APPPATH\Views\profile_update.php on line 22.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 3 APPPATH\Controllers\Home.php(372): view('profile_update')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:36:00 --> ParseError: syntax error, unexpected token "/", expecting "," or ";"
+in APPPATH\Views\profile_update.php on line 22.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 3 APPPATH\Controllers\Home.php(372): view('profile_update')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:40:01 --> ParseError: syntax error, unexpected token "/", expecting "," or ";"
+in APPPATH\Views\profile_update.php on line 22.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 3 APPPATH\Controllers\Home.php(424): view('profile_update', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:40:02 --> ParseError: syntax error, unexpected token "/", expecting "," or ";"
+in APPPATH\Views\profile_update.php on line 22.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 3 APPPATH\Controllers\Home.php(424): view('profile_update', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:40:38 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\profile_update.php on line 39.
+ 1 APPPATH\Views\profile_update.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile_update.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile_update.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 5 APPPATH\Controllers\Home.php(424): view('profile_update', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:40:40 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\profile_update.php on line 39.
+ 1 APPPATH\Views\profile_update.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile_update.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile_update.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 5 APPPATH\Controllers\Home.php(424): view('profile_update', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:45:14 --> ParseError: syntax error, unexpected identifier "कोड", expecting "function" or "const"
+in APPPATH\Controllers\Home.php on line 377.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci-4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(901): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:45:15 --> ParseError: syntax error, unexpected identifier "कोड", expecting "function" or "const"
+in APPPATH\Controllers\Home.php on line 377.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci-4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(901): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:45:57 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\profile_update.php on line 39.
+ 1 APPPATH\Views\profile_update.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile_update.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile_update.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 5 APPPATH\Controllers\Home.php(432): view('profile_update', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:47:46 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\profile_update.php on line 43.
+ 1 APPPATH\Views\profile_update.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile_update.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile_update.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 5 APPPATH\Controllers\Home.php(432): view('profile_update', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:48:03 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\profile_update.php on line 39.
+ 1 APPPATH\Views\profile_update.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile_update.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile_update.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 5 APPPATH\Controllers\Home.php(432): view('profile_update', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:48:15 --> ParseError: syntax error, unexpected token "/", expecting "," or ";"
+in APPPATH\Views\profile_update.php on line 22.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 3 APPPATH\Controllers\Home.php(432): view('profile_update', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:51:00 --> ParseError: syntax error, unexpected variable "$user", expecting "," or ";"
+in APPPATH\Views\profile_update.php on line 35.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 3 APPPATH\Controllers\Home.php(432): view('profile_update', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:51:02 --> ParseError: syntax error, unexpected variable "$user", expecting "," or ";"
+in APPPATH\Views\profile_update.php on line 35.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile_update', [], true)
+ 3 APPPATH\Controllers\Home.php(432): view('profile_update', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 06:58:03 --> TypeError: CodeIgniter\Model::insert(): Argument #2 ($returnID) must be of type bool, array given, called in C:\xampp\htdocs\ci-4\app\Controllers\Home.php on line 421
+in SYSTEMPATH\Model.php on line 735.
+ 1 APPPATH\Controllers\Home.php(421): CodeIgniter\Model->insert('1', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:26:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 389.
+ 1 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Home.php(476): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:26:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 389.
+ 1 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Home.php(476): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:27:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 389.
+ 1 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Home.php(476): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:29:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 389.
+ 1 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Home.php(476): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:31:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 389.
+ 1 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Home.php(476): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:31:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 389.
+ 1 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Home.php(476): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:32:27 --> TypeError: CodeIgniter\Model::insert(): Argument #2 ($returnID) must be of type bool, array given, called in C:\xampp\htdocs\ci-4\app\Controllers\Home.php on line 476
+in SYSTEMPATH\Model.php on line 735.
+ 1 APPPATH\Controllers\Home.php(476): CodeIgniter\Model->insert(null, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:32:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 389.
+ 1 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Home.php(476): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:33:04 --> BadMethodCallException: Call to undefined method App\Models\UserDetailsModel::updates
+in SYSTEMPATH\Model.php on line 879.
+ 1 APPPATH\Controllers\Home.php(476): CodeIgniter\Model->__call('updates', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:34:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 389.
+ 1 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Home.php(475): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:35:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 389.
+ 1 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Home.php(475): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:35:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 389.
+ 1 SYSTEMPATH\BaseModel.php(987): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\Home.php(475): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:44:23 --> BadMethodCallException: Call to undefined method App\Models\UserDetailsModel::send
+in SYSTEMPATH\Model.php on line 879.
+ 1 APPPATH\Controllers\Home.php(475): CodeIgniter\Model->__call('send', [])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:53:48 --> ErrorException: Undefined variable $model
+in APPPATH\Controllers\Home.php on line 475.
+ 1 APPPATH\Controllers\Home.php(475): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $model', 'C:\\xampp\\htdocs\\ci-4\\app\\Controllers\\Home.php', 475)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-20 09:54:09 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`user_details`, CONSTRAINT `user_details_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)) in C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ci-4\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\ci-4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\ci-4\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\ci-4\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ci-4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ci-4\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ci-4\app\Controllers\Home.php(475): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+#9 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\ci-4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci-4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-05-20 09:54:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`user_details`, CONSTRAINT `user_details_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user_details` (`country`, `state`, `district`, `pincode`, `mobile`, `local_address`, `permanent_address`) VALUES (:country:, :state:, :district:, :pincode:, :mobile:, :local_address:, :permanent_address:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Home.php(475): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:54:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`user_details`, CONSTRAINT `user_details_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user_details` (`country`, `state`, `district`, `pincode`, `mobile`, `local_address`, `permanent_address`) VALUES (\'india\', \'mp\', \'sagar\', \'470120\', \'7509770150\', \'mohasa\', \'sagar ,mohasa\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user_details` (`country`, `state`, `district`, `pincode`, `mobile`, `local_address`, `permanent_address`) VALUES (\'india\', \'mp\', \'sagar\', \'470120\', \'7509770150\', \'mohasa\', \'sagar ,mohasa\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user_details` (`country`, `state`, `district`, `pincode`, `mobile`, `local_address`, `permanent_address`) VALUES (:country:, :state:, :district:, :pincode:, :mobile:, :local_address:, :permanent_address:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Home.php(475): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 09:54:09 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ecommerce`.`user_details`, CONSTRAINT `user_details_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `user_details` (`country`, `state`, `district`, `pincode`, `mobile`, `local_address`, `permanent_address`) VALUES (\'india\', \'mp\', \'sagar\', \'470120\', \'7509770150\', \'mohasa\', \'sagar ,mohasa\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user_details` (`country`, `state`, `district`, `pincode`, `mobile`, `local_address`, `permanent_address`) VALUES (\'india\', \'mp\', \'sagar\', \'470120\', \'7509770150\', \'mohasa\', \'sagar ,mohasa\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user_details` (`country`, `state`, `district`, `pincode`, `mobile`, `local_address`, `permanent_address`) VALUES (\'india\', \'mp\', \'sagar\', \'470120\', \'7509770150\', \'mohasa\', \'sagar ,mohasa\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user_details` (`country`, `state`, `district`, `pincode`, `mobile`, `local_address`, `permanent_address`) VALUES (:country:, :state:, :district:, :pincode:, :mobile:, :local_address:, :permanent_address:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Home.php(475): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 10:07:09 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1778.
+ 1 SYSTEMPATH\BaseModel.php(1778): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(956): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Home.php(481): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile_update()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 10:23:04 --> ErrorException: Undefined array key "country"
+in APPPATH\Views\profile.php on line 25.
+ 1 APPPATH\Views\profile.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "country"', 'C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile.php', 25)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile', [], true)
+ 5 APPPATH\Controllers\Home.php(272): view('profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 10:27:14 --> ErrorException: Undefined array key "username"
+in APPPATH\Views\profile.php on line 19.
+ 1 APPPATH\Views\profile.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile.php', 19)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile', [], true)
+ 5 APPPATH\Controllers\Home.php(277): view('profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 10:27:16 --> ErrorException: Undefined array key "username"
+in APPPATH\Views\profile.php on line 19.
+ 1 APPPATH\Views\profile.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile.php', 19)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile', [], true)
+ 5 APPPATH\Controllers\Home.php(277): view('profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 10:33:56 --> ErrorException: Undefined variable $details
+in APPPATH\Views\profile.php on line 40.
+ 1 APPPATH\Views\profile.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $details', 'C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile.php', 40)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ci-4\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile', [], true)
+ 5 APPPATH\Controllers\Home.php(277): view('profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->profile()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
